@@ -2,6 +2,10 @@
 # Wine Web Scraping with Selenium and MongoDB
 This project involves automated web scraping of 1000 wine pages from the Vivino wine website, storing reviews and various metadata in a MongoDB database. The code was written in Python using Selenium to navigate and scrape data from the website.
 
+Introduction:
+The Vivino wine website is a popular platform that provides detailed information about different wines. The website contains various pages that list wines based on their colors, ratings, and prices. This project aims to use Selenium to extract data from the Vivino wine website and store it in a MongoDB database. The extracted data includes wine details, reviews, links, and taste. The project involves writing Python code to perform web scraping and MongoDB storage tasks.
+
+
 # Features
 The following data is scraped and stored for each wine:
 
