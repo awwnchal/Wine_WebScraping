@@ -5,6 +5,26 @@ This project involves automated web scraping of 1000 wine pages from the Vivino 
 Introduction:
 The Vivino wine website is a popular platform that provides detailed information about different wines. The website contains various pages that list wines based on their colors, ratings, and prices. This project aims to use Selenium to extract data from the Vivino wine website and store it in a MongoDB database. The extracted data includes wine details, reviews, links, and taste. The project involves writing Python code to perform web scraping and MongoDB storage tasks.
 
+# Project Overview
+
+1. Navigating Vivino's Website
+
+The first part of the project involves using Selenium to navigate the Vivino website. The program will automate browser actions to access specific pages, such as selecting "Wines," filtering by wine type, and choosing the desired rating. The goal is to familiarize yourself with Selenium and verify the functionality of the website.
+
+2. Web Scraping
+
+The next step is to implement web scraping functionality. The program will use Selenium to access wine pages with specified wine IDs, pause between page loads, and perform various actions. These actions include printing the ID and URL of the resulting page, checking for 404 errors, and determining if the page is forwarded to a different ID.
+
+Additionally, the program will access specific wine pages, scroll to the bottom, and click on "Show more reviews" to load additional reviews. If possible, it will scroll down further to load as many reviews as possible within the review window.
+
+The loaded page will be saved as an HTML file, with the original ID and destination URL added as headers.
+
+3. Parsing and Storing
+
+The final step involves parsing the saved HTML files and storing the extracted information in MongoDB. The program will create a MongoDB database named "vivino" with collections for wines, reviews, links, and taste. It will read the saved files and store the wine-related data in the "wines" collection, the reviews in the "reviews" collection, the encountered wine IDs in the "links" collection, and the taste information in the "taste" collection.
+
+To expand the dataset, the program will repeat the web scraping and storing process for 1,000 random wine IDs between 1 and 999,999.
+
 
 # Features
 The following data is scraped and stored for each wine:
@@ -69,26 +89,6 @@ Start MongoDB on your local machine.
 Run the main.py script using python main.py.
 
 The main.py script will automatically navigate to the Vivino wine website, scrape data for 1000 wines, and store the data in a MongoDB database.
-
-# Project Overview
-
-1. Navigating Vivino's Website
-
-The first part of the project involves using Selenium to navigate the Vivino website. The program will automate browser actions to access specific pages, such as selecting "Wines," filtering by wine type, and choosing the desired rating. The goal is to familiarize yourself with Selenium and verify the functionality of the website.
-
-2. Web Scraping
-
-The next step is to implement web scraping functionality. The program will use Selenium to access wine pages with specified wine IDs, pause between page loads, and perform various actions. These actions include printing the ID and URL of the resulting page, checking for 404 errors, and determining if the page is forwarded to a different ID.
-
-Additionally, the program will access specific wine pages, scroll to the bottom, and click on "Show more reviews" to load additional reviews. If possible, it will scroll down further to load as many reviews as possible within the review window.
-
-The loaded page will be saved as an HTML file, with the original ID and destination URL added as headers.
-
-3. Parsing and Storing
-
-The final step involves parsing the saved HTML files and storing the extracted information in MongoDB. The program will create a MongoDB database named "vivino" with collections for wines, reviews, links, and taste. It will read the saved files and store the wine-related data in the "wines" collection, the reviews in the "reviews" collection, the encountered wine IDs in the "links" collection, and the taste information in the "taste" collection.
-
-To expand the dataset, the program will repeat the web scraping and storing process for 1,000 random wine IDs between 1 and 999,999.
 
 Acknowledgments
 
