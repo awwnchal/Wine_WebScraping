@@ -7,29 +7,48 @@ This project involves automated web scraping of 1000 wine pages from the Vivino 
 The following data is scraped and stored for each wine:
 
 wine_id
+
 winery
+
 name
+
 grapes
+
 badges
+
 region
+
 wine_style
+
 allergens
+
 date_of_download
+
 avg_rating
+
 num_rating
+
 avg_price
+
 goes_well_with
+
 user_id
+
 user_name
+
 num_user_reviews
+
 vintage
 
 
 Technologies
+
 The project is built using the following technologies:
 
 Python 3.9
+
 Selenium 4.0
+
 MongoDB 5.0
 
 Getting Started
@@ -50,4 +69,5 @@ The main.py script will automatically navigate to the Vivino wine website, scrap
 
 
 Acknowledgments
+
 This project was inspired by the Vivino wine website and the need to automate the collection of wine data for furthur analysis.
